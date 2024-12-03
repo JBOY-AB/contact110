@@ -1,21 +1,135 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Contact Info Section */
+#contact-info-section {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+  color: #333;
+  margin-top: 70px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Top Grey Image */
+#contact-info-section .top-grey img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: -80px;
+}
+
+/* Flex Container to align info-box and form-box */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  background-color: #f4f4f4;
+}
+
+/* Styling for the Information Box */
+.info-boxes {
+  flex: 1;
+  text-align: left;
+  margin-right: 20px;
+  padding: 20px;
+  max-width: 400px;
+}
+
+.info-boxes h3 {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  margin-bottom: 20px;
+}
+
+.info-boxes p {
+  font-size: 1rem;
+  margin: 5px 0;
+  line-height: 30px;
+}
+
+/* Contact Form */
+.form-box {
+  flex: 1;
+  padding: 20px;
+  width: 50%;
+}
+
+/* Form Row for side-by-side input fields */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  width: 48%;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group2 {
+  width: 100%;
+  text-align: left;
+}
+
+/* Input and Textarea */
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #1c1c9b;
+}
+
+/* Textarea */
+textarea {
+  resize: none;
+}
+
+/* Button Box */
+.button-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-button {
+  background-color: #1c1c9b;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contact-button:hover {
+  background-color: #141482;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  .info-boxes,
+  .form-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group {
+    width: 100%;
+  }
 }
